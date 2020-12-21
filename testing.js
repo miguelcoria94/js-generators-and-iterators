@@ -1,7 +1,10 @@
-const map = new Map()
+function* timestampGenerator() {
+    console.log(Date.now())
+    yield;
+    console.log('execution continued')
+}
 
-map.set('key1', 'value 1')
-map.set("key2", "value 2");
-const mapIterator = map[Symbol.iterator]();
-console.log(mapIterator.next().value)
-console.log(mapIterator.next().value);
+const it = timestampGenerator()
+
+it.next()
+it.next()
