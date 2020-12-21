@@ -10,3 +10,4 @@ readline.question("What would you like to log today? ", item => {
     console.log(item);
     readline.close()
 })
+

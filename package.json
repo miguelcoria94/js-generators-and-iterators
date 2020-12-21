@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/miguelcoria94/js-generators-and-iterators/issues"
   },
-  "homepage": "https://github.com/miguelcoria94/js-generators-and-iterators#readme"
+  "homepage": "https://github.com/miguelcoria94/js-generators-and-iterators#readme",
+  "dependencies": {
+    "axios": "^0.21.0"
+  }
 }
