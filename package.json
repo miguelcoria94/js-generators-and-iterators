@@ -1,0 +1,19 @@
+{
+  "name": "js-gen-and-its",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguelcoria94/js-generators-and-iterators.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miguelcoria94/js-generators-and-iterators/issues"
+  },
+  "homepage": "https://github.com/miguelcoria94/js-generators-and-iterators#readme"
+}
