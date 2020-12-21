@@ -13,6 +13,36 @@ readline.prompt()
 readline.on('line', line => {
     switch (line.trim()) {
         case 'list vegan foods':
+            {
+                axios.get('http://localhost:3001/food').then(({ data }) => {
+                    let idx = 0;
+                    const veganOnly = data.filter(food=> {
+                        return food.dietary_preferences.includes('vegan');
+                    })
+                    const veganIterable = {
+                        [Symbol.iterator]() {
+                            return {
+                                [Symbol.iterator]() { return this; },
+                                next() {
+                                    const current = data[idx];
+                                    idx++;
+                                    if (current) {
+                                        return { value: current, done: false };
+                                    } else {
+                                        return { value: current, dont: true };
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                    for (let val of veganOnly) {
+                                console.log(val.name)
+                    }
+                    readline.prompt()
+                })
+            }
+            break;
         case 'log':
             {
                 readline.question(
